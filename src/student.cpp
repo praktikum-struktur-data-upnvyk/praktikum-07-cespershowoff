@@ -156,8 +156,8 @@ void postorder(const Node* root) {
 // =============================================================================
 void clear(Node*& root) {
     if(root != nullptr){
-        postorder(root->left);
-        postorder(root->right);
+        clear(root->left);
+        clear(root->right);
         delete root;
         root = nullptr;
     }
